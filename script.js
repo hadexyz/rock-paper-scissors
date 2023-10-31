@@ -33,7 +33,21 @@ function playRound(playerSelection, computerSelection) {
         return "lost"
     }
 }
-   
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+
+function game () {
+    let score = 0
+    for (i = 0; i < 5; i++) {
+        let playerSelection = prompt("Let's play RPS! What's your choice?")
+        let computerSelection = getComputerChoice()
+        console.log(playRound(playerSelection, computerSelection))
+        if (playRound(playerSelection, computerSelection) == "won") {
+            score++
+        }
+        if (playRound(playerSelection, computerSelection) == "lost") {
+            score--
+        }
+        console.log(`Current score: ${score}`)
+    }
+console.log("Game ended!")
+}
+game()
