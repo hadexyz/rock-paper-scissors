@@ -17,21 +17,27 @@ function getComputerChoice() {
 }
 function playRound(playerSelection, computerSelection) {
     // your code here!
-    if (playerSelection.toLowerCase() == computerSelection) {
-        return "tied"
-    }
-    else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
-        return "won"
-    }
-    else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
-        return "won"
-    }
-    else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
-        return "won"
+    if (playerSelection.toLowerCase() == 'rock' || playerSelection.toLowerCase() == 'paper' || playerSelection.toLowerCase() == 'scissors'){
+        if (playerSelection.toLowerCase() == computerSelection) {
+            return "tied"
+        }
+        else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
+            return "won"
+        }
+        else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
+            return "won"
+        }
+        else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
+            return "won"
+        }
+        else {
+            return "lost"
+        }
     }
     else {
-        return "lost"
+        console.log("invalid answer")
     }
+
 }
 
 function game () {
