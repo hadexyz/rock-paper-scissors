@@ -1,2 +1,3 @@
 # rock-paper-scissors
-Play the RPS game against AI
+Play the Rock, paper, scissors game against AI.
+Play in browser's console.
