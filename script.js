@@ -48,6 +48,26 @@ function game () {
         }
         console.log(`Current score: ${score}`)
     }
-console.log("Game ended!")
+    console.log("Game ended!")
+    
+    if (score == 5) {
+        console.log("how the hell did you win ALL? Are you A HACKER")
+    }
+    else if (score == -5) {
+        console.log("you literally lost all the games. Is your superpower losing??")
+    }
+    else if (score < 0) {
+        console.log("Loser! take the L!")
+    }
+    else if (score == 0) {
+        console.log("You tied with the bot! Guess you're average..")
+    }
+    else if (score > 0) {
+        console.log("You... Won...")
+    }
+    else {
+        console.log("you aren't supposed to get to see this message")
+    }
+
 }
 game()
