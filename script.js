@@ -5,13 +5,13 @@ function getComputerChoice() {
     let RNG = Math.floor(Math.random() * 3 + 1);
     switch (RNG) {
         case 1:
-            console.log("AI Chosen rock")
+            console.log("AI Choses rock")
             return("rock");
         case 2:
-            console.log("AI Chosen paper")
+            console.log("AI Choses paper")
             return("paper");
         case 3:
-            console.log("AI Chosen scissors")
+            console.log("AI Choses scissors")
             return("scissors");
     }
 }
@@ -44,7 +44,7 @@ function game () {
     let score = 0
     for (i = 0; i < 5; i++) {
         let playerSelection = prompt("Let's play RPS! What's your choice?")
-        console.log(`Player Chosen ${playerSelection}`)
+        console.log(`Player Choses ${playerSelection}`)
         let computerSelection = getComputerChoice()
         if (playRound(playerSelection, computerSelection) == "win") {
             score++
@@ -55,7 +55,7 @@ function game () {
             score--
         }
         if (playRound(playerSelection, computerSelection) == "tie") {
-            console.log(`${playerSelection} ties with ${computerSelection} !`)
+            console.log(`${playerSelection} ties with ${computerSelection}!`)
         }
         console.log(`Current score: ${score}`)
     }
