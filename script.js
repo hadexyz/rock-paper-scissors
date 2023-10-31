@@ -3,14 +3,16 @@ console.log("script.js connected succesfully")
 
 function getComputerChoice() {
     let RNG = Math.floor(Math.random() * 3 + 1);
-    console.log(`Random number generated:${RNG}`)
     switch (RNG) {
         case 1:
-            return("Rock");
+            console.log("AI Chosen rock")
+            return("rock");
         case 2:
-            return("Paper");
+            console.log("AI Chosen paper")
+            return("paper");
         case 3:
-            return("Scissor");
+            console.log("AI Chosen Scissors")
+            return("scissors");
     }
 }
 function playRound(playerSelection, computerSelection) {
