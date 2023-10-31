@@ -19,19 +19,19 @@ function playRound(playerSelection, computerSelection) {
     // your code here!
     if (playerSelection.toLowerCase() == 'rock' || playerSelection.toLowerCase() == 'paper' || playerSelection.toLowerCase() == 'scissors'){
         if (playerSelection.toLowerCase() == computerSelection) {
-            return `${playerSelection} ties with ${computerSelection}!`
+            return `tie`
         }
         else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
-            return `Rock smashes scissors!`
+            return "win"
         }
         else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
-            return `Paper wraps rock!`
+            return "win"
         }
         else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
-            return "Scissors cuts paper!"
+            return "win"
         }
         else {
-            return "Sorry, but ya clearly lost.."
+            return "lose"
         }
     }
     else {
@@ -46,12 +46,16 @@ function game () {
         let playerSelection = prompt("Let's play RPS! What's your choice?")
         console.log(`Player Chosen ${playerSelection}`)
         let computerSelection = getComputerChoice()
-        console.log(playRound(playerSelection, computerSelection))
-        if (playRound(playerSelection, computerSelection) == "won") {
+        if (playRound(playerSelection, computerSelection) == "win") {
             score++
+            console.log(`${playerSelection} beats ${computerSelection}!`)
         }
-        if (playRound(playerSelection, computerSelection) == "lost") {
+        if (playRound(playerSelection, computerSelection) == "lose") {
+            console.log(`${playerSelection} loses to ${computerSelection}.. Sorry`)
             score--
+        }
+        if (playRound(playerSelection, computerSelection) == "tie") {
+            console.log(`${playerSelection} ties with ${computerSelection} !`)
         }
         console.log(`Current score: ${score}`)
     }
