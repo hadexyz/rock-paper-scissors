@@ -11,7 +11,7 @@ function getComputerChoice() {
             console.log("AI Chosen paper")
             return("paper");
         case 3:
-            console.log("AI Chosen Scissors")
+            console.log("AI Chosen scissors")
             return("scissors");
     }
 }
@@ -19,19 +19,19 @@ function playRound(playerSelection, computerSelection) {
     // your code here!
     if (playerSelection.toLowerCase() == 'rock' || playerSelection.toLowerCase() == 'paper' || playerSelection.toLowerCase() == 'scissors'){
         if (playerSelection.toLowerCase() == computerSelection) {
-            return "tied"
+            return `${playerSelection} ties with ${computerSelection}!`
         }
         else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
-            return "won"
+            return `Rock smashes scissors!`
         }
         else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
-            return "won"
+            return `Paper wraps rock!`
         }
         else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
-            return "won"
+            return "Scissors cuts paper!"
         }
         else {
-            return "lost"
+            return "Sorry, but ya clearly lost.."
         }
     }
     else {
@@ -44,6 +44,7 @@ function game () {
     let score = 0
     for (i = 0; i < 5; i++) {
         let playerSelection = prompt("Let's play RPS! What's your choice?")
+        console.log(`Player Chosen ${playerSelection}`)
         let computerSelection = getComputerChoice()
         console.log(playRound(playerSelection, computerSelection))
         if (playRound(playerSelection, computerSelection) == "won") {
