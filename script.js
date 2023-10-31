@@ -43,7 +43,7 @@ function playRound(playerSelection, computerSelection) {
 function game () {
     let score = 0
     for (i = 0; i < 5; i++) {
-        let playerSelection = prompt("Let's play RPS! What's your choice?")
+        let playerSelection = prompt("Let's play 5 rounds of Rock Paper Scissors! What's your choice?")
         console.log(`Player Choses ${playerSelection}`)
         let computerSelection = getComputerChoice()
         if (playRound(playerSelection, computerSelection) == "win") {
