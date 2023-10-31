@@ -17,16 +17,16 @@ function getComputerChoice() {
 }
 function playRound(playerSelection, computerSelection) {
     // your code here!
-    if (playerSelection == computerSelection) {
+    if (playerSelection.toLowerCase() == computerSelection) {
         return "tied"
     }
-    else if (playerSelection == "rock" && computerSelection == "scissors") {
+    else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
         return "won"
     }
-    else if (playerSelection == "paper" && computerSelection == "rock") {
+    else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
         return "won"
     }
-    else if (playerSelection == "scissors" && computerSelection == "paper") {
+    else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
         return "won"
     }
     else {
@@ -54,7 +54,7 @@ function game () {
         console.log("how the hell did you win ALL? Are you A HACKER")
     }
     else if (score == -5) {
-        console.log("you literally lost all the games. Is your superpower losing??")
+        console.log("you literally lost all the games. Is your superpower losing?")
     }
     else if (score < 0) {
         console.log("Loser! take the L!")
