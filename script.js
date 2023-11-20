@@ -17,7 +17,9 @@ function getComputerChoice() {
 }
 function playRound(playerSelection, computerSelection) {
     // your code here!
-    if (playerSelection.toLowerCase() == 'rock' || playerSelection.toLowerCase() == 'paper' || playerSelection.toLowerCase() == 'scissors'){
+    if (playerSelection.toLowerCase() == 'rock' ||
+        playerSelection.toLowerCase() == 'paper' || 
+        playerSelection.toLowerCase() == 'scissors'){
         if (playerSelection.toLowerCase() == computerSelection) {
             return `tie`
         }
@@ -43,7 +45,8 @@ function playRound(playerSelection, computerSelection) {
 function game () {
     let score = 0
     for (i = 0; i < 5; i++) {
-        let playerSelection = prompt("Let's play 5 rounds of Rock Paper Scissors! What's your choice?")
+        let playerSelection = prompt("Let's play 5 rounds of Rock Paper Scissors! \
+What's your choice?")
         console.log(`Player Choses ${playerSelection}`)
         let computerSelection = getComputerChoice()
         if (playRound(playerSelection, computerSelection) == "win") {
